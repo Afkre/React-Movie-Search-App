@@ -36,3 +36,119 @@
     transform: rotate(360deg);
   }
 }
+.buttons {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+}
+.navbar {
+  background-color: #0d47a1 !important;
+  padding: 1rem 3rem;
+}
+.navbar-brand {
+  color: white !important;
+}
+.search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #bdbdbd;
+  padding: 1rem;
+}
+.search-input {
+  height: 40px;
+  width: 300px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+.movie-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.movie {
+  background-color: #3f51b5;
+  border-radius: 3px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 1rem;
+  width: 300px;
+  position: relative;
+}
+.movie img {
+  object-fit: cover;
+  height: 450px;
+  max-width: 100%;
+}
+.movie-info {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.movie-info {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.movie-info h3 {
+  margin: 0;
+  color: antiquewhite;
+}
+.movie-over {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  color: black;
+  overflow: auto;
+  max-height: 100%;
+  padding: 1rem;
+  transform: translateX(100%);
+  transition: 0.3s ease-in-out;
+}
+.movie:hover .movie-over {
+  transform: translateX(0%);
+}
+.tag {
+  border-radius: 5px;
+  padding: 0.7rem;
+  font-weight: bold;
+}
+
+.tag.green {
+  background-color: rgb(80, 246, 252);
+}
+.tag.orange {
+  background-color: rgb(245, 179, 57);
+}
+.tag.red {
+  background-color: rgb(252, 96, 39);
+}
+.login {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.login-form {
+  flex: 1;
+  background-color: whitesmoke;
+  color: black;
+  padding: 4rem;
+}
+.form-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.form-label {
+  padding-left: 1.5rem;
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+}
+.form-control {
+  width: 90%;
+  margin: 0.3rem;
+}
