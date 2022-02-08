@@ -1,5 +1,9 @@
 import React from 'react';
 
 export default function Register() {
-  return <div>Register</div>;
+  return (
+    <React.Fragment>
+      Register
+    </React.Fragment>
+  );
 }
