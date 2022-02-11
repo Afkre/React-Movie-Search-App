@@ -19,7 +19,7 @@ export default function Login() {
     return (
         <div className='login'>
             <div>
-                <img src='https://picsum.photos/800/800' alt='photo' />
+                <img src='https://picsum.photos/1000/1000' alt='photo' />
             </div>
             <div className='login-form'>
                 <div className={loginError ? 'alert alert-danger' : 'alert alert-danger d-none'} role="alert">

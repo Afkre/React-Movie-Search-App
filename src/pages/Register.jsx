@@ -66,7 +66,7 @@ export default function Register() {
                 </form>
         </div>
         <div className="form-image">
-                <img src={"https://picsum.photos/800/800"} alt="sample-movie" />
+                <img src={"https://picsum.photos/1000/1000"} alt="sample-movie" />
             </div>
         </div>
     );
