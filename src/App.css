@@ -1,16 +1,8 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+* {
+  margin: 0;
+  padding: 0;
 }
 
 .App-header {
@@ -24,26 +16,22 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 .buttons {
   display: flex;
   flex-direction: row;
   height: 50px;
 }
+
 .navbar {
   background-color: #0d47a1 !important;
   padding: 1rem 3rem;
+  /* position: fixed;
+  z-index: 999;
+  top:0px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+ */
 }
 .navbar-brand {
   color: white !important;
@@ -53,7 +41,8 @@
   display: flex;
   justify-content: center;
   background-color: #bdbdbd;
-  padding: 1rem;
+  /*padding: 1rem;
+  margin-top: 5rem; */
 }
 .search-input {
   height: 40px;
@@ -62,7 +51,12 @@
   border: none;
   border-radius: 5px;
 }
+
 .movie-container {
+  background-image: url("/public/sahneperdesi_1555331552.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -138,6 +132,7 @@
   background-color: whitesmoke;
   color: black;
   padding: 4rem;
+  margin-top: 5rem;
 }
 .form-title {
   text-align: center;
@@ -151,4 +146,21 @@
 .form-control {
   width: 90%;
   margin: 0.3rem;
+}
+.register {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.register-form {
+  flex: 1;
+  padding: 4rem;
+  color: black;
+  background-color: white;
+}
+
+.register-control {
+  width: 90%;
+  margin: 20px;
 }

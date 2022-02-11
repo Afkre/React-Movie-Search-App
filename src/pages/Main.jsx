@@ -86,6 +86,7 @@ export default function Main() {
 
     return (
         <React.Fragment>
+            
             <form className="search" onSubmit={handleSubmit}>
                 <input
                     type='search'
