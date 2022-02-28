@@ -1,25 +1,30 @@
 import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AuthContext from '../context/AuthContext';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../auth/firebase-config';
 
 export default function Login() {
 
+    const navigate = useNavigate();
     const { handleLogin, loginError } = useContext(AuthContext);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        if (email && password) {
-            handleLogin(email, password)
-        } else {
-            // setAlertClass('alert alert-danger')
+        try {
+            let user = await signInWithEmailAndPassword(auth, email, password);
+            // console.log(user);
+            navigate('/');
+        } catch (err) {
+            alert(err)
         }
     }
     return (
         <div className='login'>
             <div>
-                <img src='https://picsum.photos/1000/1000' alt='photo' />
+                <img src='https://picsum.photos/800/800' alt='photo' />
             </div>
             <div className='login-form'>
                 <div className={loginError ? 'alert alert-danger' : 'alert alert-danger d-none'} role="alert">

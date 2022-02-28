@@ -1,8 +1,9 @@
-import React, {useEffect, useState }from "react";
+import React, {useEffect, useState, useContext }from "react";
 import axios from 'axios'
 import MovieCard from "../components/MovieCard";
 import Loading from "../components/Loading";
 import NotFound from "../components/NotFound";
+import AuthContext from "../context/AuthContext";
 
 //const UNFILTERED='https://api.themoviedb.org/3/discover/movie?api_key=782eba85d57e9695c16f404c4415730a'
 
@@ -17,8 +18,9 @@ export default function Main() {
     let content;
     const [searchTerm, setSearchTerm] = useState('');
     const [movies, setMovies] = useState([]);
-    const [loading, setLoading] = useState(false)
-    const[notFound, setNotFound]= useState(false)
+    const [loading, setLoading] = useState(false);
+    const [notFound, setNotFound] = useState(false);
+    const { currentUser } = useContext(AuthContext);
 
     const getMovies = (API) => {
         setLoading(true)
@@ -26,9 +28,7 @@ export default function Main() {
             //.then((res) => console.log(res.data.results))
             .then((res) => {
                 setMovies(res.data.results)
-                setTimeout(() => {
-                    setLoading(false)
-                }, 1000)
+                setLoading(false)
                 if (res.data.results.length == 0) {
                     setNotFound(true);
                 }
@@ -81,7 +81,7 @@ export default function Main() {
 
     useEffect(() => {
         getMovies(UNFILTERED)
-        console.log(process.env.REACT_APP_API_KEY)
+        //console.log(process.env.REACT_APP_API_KEY)
     }, []);
 
     return (
