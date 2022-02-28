@@ -25,13 +25,13 @@
 .navbar {
   background-color: #0d47a1 !important;
   padding: 1rem 3rem;
-  /* position: fixed;
-  z-index: 999;
+  /*position: fixed;
   top:0px;
+  width: 100%;
+  z-index: 999;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
- */
+  */
 }
 .navbar-brand {
   color: white !important;
@@ -41,7 +41,7 @@
   display: flex;
   justify-content: center;
   /* background-color: #bdbdbd; */
-  background-image: linear-gradient(300deg, black 0%, whitesmoke 100%);padding: 1rem;
+  background-image: linear-gradient(300deg, black 0%, whitesmoke 50%,black 100% );padding: 1rem;
   /*margin-top: 5rem; */
 }
 .search-input {
