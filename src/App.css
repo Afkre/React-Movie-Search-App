@@ -41,7 +41,7 @@
   display: flex;
   justify-content: center;
   /* background-color: #bdbdbd; */
-  background-image: linear-gradient(300deg, black 0%, whitesmoke 50%,black 100% );padding: 1rem;
+  background-image: linear-gradient(260deg, black 0%, white 50%,black 100% );padding: 1rem;
   /*margin-top: 5rem; */
 }
 .search-input {
